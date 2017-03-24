@@ -15,29 +15,25 @@ namespace Assess2Tests
 
     public partial class Form1 : Form
     {
-
         int count = 0; //Determines maximum spot in the array
+        int editcount = 0; //Determines point in array when editing
         CustomerDetails[] allCustomers = new CustomerDetails[100];
 
         public Form1()
         {
-
             InitializeComponent();
         }
 
         private void btnSaveCust_Click(object sender, EventArgs e)
         {
             //Needs some sort of statement to catch blank inputs
-
+            editcount = count;
             allCustomers[count] = new CustomerDetails();
             allCustomers[count].CustomerName = txtCustName.Text;
             allCustomers[count].CustomerNumber = Convert.ToInt32(txtCustNumber.Text);
             allCustomers[count].CustomerAddress = txtCustAddress.Text;
             allCustomers[count].CustomerContact = Convert.ToInt32(txtCustContact.Text);
             count++;
-
-
-
         }
 
         private void btnLoadCust_Click(object sender, EventArgs e)
@@ -50,12 +46,24 @@ namespace Assess2Tests
                     txtCustNumber.Text = Convert.ToString(allCustomers[i].CustomerNumber);
                     txtCustAddress.Text = allCustomers[i].CustomerAddress;
                     txtCustContact.Text = Convert.ToString(allCustomers[i].CustomerContact);
-
+                    editcount = i;
                 }
+         }                    
+        }
 
-         } 
+        private void btnEditCust_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < count; i++)
+            {
+               if (editcount == i)
+                {
+                    allCustomers[i].CustomerName = txtCustName.Text;
+                    allCustomers[i].CustomerNumber = Convert.ToInt32(txtCustNumber.Text);
+                    allCustomers[i].CustomerAddress = txtCustAddress.Text;
+                    allCustomers[i].CustomerContact = Convert.ToInt32(txtCustContact.Text);
+                }
+            }
 
-        
         }
     }
 }

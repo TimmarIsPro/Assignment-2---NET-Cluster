@@ -59,12 +59,13 @@
             // 
             // btnEditCust
             // 
-            this.btnEditCust.Location = new System.Drawing.Point(237, 218);
+            this.btnEditCust.Location = new System.Drawing.Point(318, 189);
             this.btnEditCust.Name = "btnEditCust";
             this.btnEditCust.Size = new System.Drawing.Size(75, 23);
             this.btnEditCust.TabIndex = 2;
             this.btnEditCust.Text = "EditCustomer";
             this.btnEditCust.UseVisualStyleBackColor = true;
+            this.btnEditCust.Click += new System.EventHandler(this.btnEditCust_Click);
             // 
             // txtCustName
             // 
