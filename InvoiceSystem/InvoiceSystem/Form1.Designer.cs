@@ -48,10 +48,11 @@
             this.btnEditCustomer = new System.Windows.Forms.Button();
             this.btnLoadInvoice = new System.Windows.Forms.Button();
             this.btnEditInvoice = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnBackground = new System.Windows.Forms.Button();
             this.btnSaveCustomer = new System.Windows.Forms.Button();
             this.btnSaveInvoice = new System.Windows.Forms.Button();
             this.lblCustLabel = new System.Windows.Forms.Label();
+            this.lblInvoiceLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -62,7 +63,6 @@
             this.label1.Size = new System.Drawing.Size(91, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Customer Number";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -225,16 +225,16 @@
             this.btnEditInvoice.UseVisualStyleBackColor = true;
             this.btnEditInvoice.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // btnBackground
             // 
-            this.button5.Location = new System.Drawing.Point(434, 446);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(88, 19);
-            this.button5.TabIndex = 0;
-            this.button5.TabStop = false;
-            this.button5.Text = "Background";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnBackground.Location = new System.Drawing.Point(434, 446);
+            this.btnBackground.Name = "btnBackground";
+            this.btnBackground.Size = new System.Drawing.Size(88, 19);
+            this.btnBackground.TabIndex = 0;
+            this.btnBackground.TabStop = false;
+            this.btnBackground.Text = "Background";
+            this.btnBackground.UseVisualStyleBackColor = true;
+            this.btnBackground.Click += new System.EventHandler(this.button5_Click);
             // 
             // btnSaveCustomer
             // 
@@ -264,15 +264,24 @@
             this.lblCustLabel.Size = new System.Drawing.Size(0, 13);
             this.lblCustLabel.TabIndex = 15;
             // 
+            // lblInvoiceLabel
+            // 
+            this.lblInvoiceLabel.AutoSize = true;
+            this.lblInvoiceLabel.Location = new System.Drawing.Point(307, 339);
+            this.lblInvoiceLabel.Name = "lblInvoiceLabel";
+            this.lblInvoiceLabel.Size = new System.Drawing.Size(0, 13);
+            this.lblInvoiceLabel.TabIndex = 16;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(558, 488);
+            this.ClientSize = new System.Drawing.Size(554, 492);
+            this.Controls.Add(this.lblInvoiceLabel);
             this.Controls.Add(this.lblCustLabel);
             this.Controls.Add(this.btnSaveInvoice);
             this.Controls.Add(this.btnSaveCustomer);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnBackground);
             this.Controls.Add(this.btnEditInvoice);
             this.Controls.Add(this.btnLoadInvoice);
             this.Controls.Add(this.btnEditCustomer);
@@ -295,7 +304,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Invoicing";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Click += new System.EventHandler(this.label1_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,10 +332,11 @@
         private System.Windows.Forms.Button btnEditCustomer;
         private System.Windows.Forms.Button btnLoadInvoice;
         private System.Windows.Forms.Button btnEditInvoice;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnBackground;
         private System.Windows.Forms.Button btnSaveCustomer;
         private System.Windows.Forms.Button btnSaveInvoice;
         private System.Windows.Forms.Label lblCustLabel;
+        private System.Windows.Forms.Label lblInvoiceLabel;
     }
 }
 
