@@ -20,5 +20,7 @@ namespace InvoiceSystem
             CustomerAddress = " ";
             CustomerContact = 0;
         }
+
+
     }
 }

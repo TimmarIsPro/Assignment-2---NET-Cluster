@@ -19,14 +19,14 @@ namespace InvoiceSystem
 
         private void button4_Click(object sender, EventArgs e)//btnLogin
         {
-            if ((txtUsername.Text == "TestAccount") && (txtPassword.Text == "TestPassword"))
+            if ((txtUsername.Text == "lister") && (txtPassword.Text == "1472"))
             {
                 Form1 f1 = new InvoiceSystem.Form1();
                 f1.ShowDialog();
                 this.Hide();
 
             }
-            else if ((txtUsername.Text == "TestAccount") && (txtPassword.Text != "TestPassword"))
+            else if ((txtUsername.Text == "lister") && (txtPassword.Text != "1472"))
             {
                 MessageBox.Show("Incorrect Password");
             }
