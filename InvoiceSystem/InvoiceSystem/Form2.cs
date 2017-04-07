@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//A basic login form using a single hardcoded 'account'.
+
 namespace InvoiceSystem
 {
     public partial class Form2 : Form
@@ -19,19 +21,21 @@ namespace InvoiceSystem
 
         private void button4_Click(object sender, EventArgs e)//btnLogin
         {
+            //Username: lister  Password: 1472
             if ((txtUsername.Text == "lister") && (txtPassword.Text == "1472"))
             {
                 Form1 f1 = new InvoiceSystem.Form1();
                 f1.ShowDialog();
-                this.Hide();
 
             }
             else if ((txtUsername.Text == "lister") && (txtPassword.Text != "1472"))
             {
+                //Mention that the password is incorrect, identifying it as the issue to a user.
                 MessageBox.Show("Incorrect Password");
             }
             else
             {
+                //Mention that the username is incorrect, identifying that as the issue to the user.
                 MessageBox.Show("Invalid Username");
             }
         }
