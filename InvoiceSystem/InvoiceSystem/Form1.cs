@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
+//A good piece of software by Timothy Stewart.
+//This program allows a user to input and save customer and invoice details to an array, and provides the ability to edit and
+//load these details. In addition an option to change the background is included.
+
 namespace InvoiceSystem
 {
     public partial class Form1 : Form
